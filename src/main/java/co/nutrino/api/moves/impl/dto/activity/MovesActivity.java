@@ -4,8 +4,8 @@ import java.util.Date;
 
 
 
-import org.codehaus.jackson.map.annotate.JsonDeserialize;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import co.nutrino.api.moves.impl.response.serialize.MovesDateDeserializer;
 
 

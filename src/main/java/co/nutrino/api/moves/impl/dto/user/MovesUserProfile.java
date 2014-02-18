@@ -6,8 +6,12 @@ import java.util.TimeZone;
 
 
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-import org.codehaus.jackson.map.annotate.JsonDeserialize;
+
+
+
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import co.nutrino.api.moves.impl.response.serialize.MovesDateDeserializer;
 import co.nutrino.api.moves.impl.response.serialize.MovesTimezoneDeserializer;

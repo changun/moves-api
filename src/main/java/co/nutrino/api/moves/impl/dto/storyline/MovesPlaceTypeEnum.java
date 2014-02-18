@@ -2,7 +2,8 @@ package co.nutrino.api.moves.impl.dto.storyline;
 
 
 
-import org.codehaus.jackson.map.annotate.JsonDeserialize;
+
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import co.nutrino.api.moves.impl.response.serialize.MovesPlaceTypeEnumDeserializer;
 
