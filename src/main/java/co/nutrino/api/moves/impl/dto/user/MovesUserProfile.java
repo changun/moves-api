@@ -5,12 +5,14 @@ import java.util.TimeZone;
 
 
 
+
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.map.annotate.JsonDeserialize;
 
 import co.nutrino.api.moves.impl.response.serialize.MovesDateDeserializer;
 import co.nutrino.api.moves.impl.response.serialize.MovesTimezoneDeserializer;
 
-
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class MovesUserProfile {
     @JsonDeserialize(using = MovesDateDeserializer.class)
     private Date firstDate;
