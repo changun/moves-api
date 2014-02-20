@@ -18,7 +18,7 @@ public class MovesResponseHandler implements IMovesResponseHandler {
     @Override
     public <T> T getResponse(Response response, Class<T> c) throws ResourceException {
 	if (response.getCode() != 200)
-	    throw new ResourceException("Request failed with status - " + response.getCode());
+	    throw new ResourceException("Request failed with status - " + response.getCode() + response.getBody());
 	try {
 	    return this.converter.convertSourceToPojo(response.getBody(), c);
 	} catch (ConversionException e) {
