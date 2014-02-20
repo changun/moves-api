@@ -10,5 +10,5 @@ import co.nutrino.api.moves.impl.response.serialize.MovesPlaceTypeEnumDeserializ
 
 @JsonDeserialize(using = MovesPlaceTypeEnumDeserializer.class)
 public enum MovesPlaceTypeEnum {
-    Unknown, School, Work, User, Foursquare, Home
+    Unknown, School, Work, User, Foursquare
 }
