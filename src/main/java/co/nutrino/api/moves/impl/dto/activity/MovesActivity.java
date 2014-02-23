@@ -5,17 +5,21 @@ import java.util.Date;
 
 
 
+
+import org.joda.time.DateTime;
+
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import co.nutrino.api.moves.impl.response.serialize.MovesDateDeserializer;
+
+import co.nutrino.api.moves.impl.response.serialize.MovesDateTimeDeserializer;
 
 
 public class MovesActivity {
     private MovesActivityEnum activity;
 
-    @JsonDeserialize(using = MovesDateDeserializer.class)
-    private Date startTime;
-    @JsonDeserialize(using = MovesDateDeserializer.class)
-    private Date endTime;
+    @JsonDeserialize(using = MovesDateTimeDeserializer.class)
+    private DateTime startTime;
+    @JsonDeserialize(using = MovesDateTimeDeserializer.class)
+    private DateTime endTime;
     private int duration;
     private int distance;
     private int steps;
@@ -30,19 +34,19 @@ public class MovesActivity {
 	this.activity = activity;
     }
 
-    public Date getStartTime() {
+    public DateTime getStartTime() {
 	return this.startTime;
     }
 
-    public void setStartTime(Date startTime) {
+    public void setStartTime(DateTime startTime) {
 	this.startTime = startTime;
     }
 
-    public Date getEndTime() {
+    public DateTime getEndTime() {
 	return this.endTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime(DateTime endTime) {
 	this.endTime = endTime;
     }
 

@@ -6,16 +6,19 @@ import java.util.Date;
 
 
 
+
+import org.joda.time.DateTime;
+
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import co.nutrino.api.moves.impl.response.serialize.MovesDateDeserializer;
+import co.nutrino.api.moves.impl.response.serialize.MovesDateTimeDeserializer;
 
 
 public class TrackPoint {
     private float lat;
     private float lon;
-    @JsonDeserialize(using = MovesDateDeserializer.class)
-    private Date timestamp;
+    @JsonDeserialize(using = MovesDateTimeDeserializer.class)
+    private DateTime timestamp;
 
     public float getLat() {
 	return this.lat;
@@ -33,11 +36,11 @@ public class TrackPoint {
 	this.lon = lon;
     }
 
-    public Date getTimestamp() {
+    public DateTime getTimestamp() {
 	return this.timestamp;
     }
 
-    public void setTimestamp(Date timestamp) {
+    public void setTimestamp(DateTime timestamp) {
 	this.timestamp = timestamp;
     }
 }

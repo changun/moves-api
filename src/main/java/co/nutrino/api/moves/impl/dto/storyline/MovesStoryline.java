@@ -1,9 +1,13 @@
 package co.nutrino.api.moves.impl.dto.storyline;
 
+
+
+
+
+
 import java.util.Date;
 
-
-
+import org.joda.time.DateTime;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
@@ -13,6 +17,7 @@ import co.nutrino.api.moves.impl.response.serialize.MovesDateDeserializer;
 public class MovesStoryline {
     @JsonDeserialize(using = MovesDateDeserializer.class)
     private Date date;
+    
     private MovesSegment[] segments;
     private int caloriesIdle;
 

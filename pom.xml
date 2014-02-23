@@ -89,7 +89,11 @@
 		  <artifactId>jackson-databind</artifactId>
 		    <version>2.3.1</version>
 		  </dependency>
-
+		<dependency>
+		  <groupId>com.fasterxml.jackson.datatype</groupId>
+		  <artifactId>jackson-datatype-joda</artifactId>
+		  <version>2.3.1</version>
+		</dependency>    
 		<!-- Testing -->
 		<dependency>
 			<groupId>junit</groupId>

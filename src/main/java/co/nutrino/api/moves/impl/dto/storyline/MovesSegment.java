@@ -1,24 +1,25 @@
 package co.nutrino.api.moves.impl.dto.storyline;
 
-import java.util.Date;
 
 
 
 
+
+import org.joda.time.DateTime;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import co.nutrino.api.moves.impl.dto.activity.MovesActivity;
-import co.nutrino.api.moves.impl.response.serialize.MovesDateDeserializer;
+import co.nutrino.api.moves.impl.response.serialize.MovesDateTimeDeserializer;
 
 
 public class MovesSegment {
     private MovesSegmentTypeEnum type;
 
-    @JsonDeserialize(using = MovesDateDeserializer.class)
-    private Date startTime;
-    @JsonDeserialize(using = MovesDateDeserializer.class)
-    private Date endTime;
+    @JsonDeserialize(using = MovesDateTimeDeserializer.class)
+    private DateTime startTime;
+    @JsonDeserialize(using = MovesDateTimeDeserializer.class)
+    private DateTime endTime;
     private MovesPlace place;
     private MovesActivity[] activities;
 
@@ -30,19 +31,19 @@ public class MovesSegment {
 	this.type = type;
     }
 
-    public Date getStartTime() {
+    public DateTime getStartTime() {
 	return this.startTime;
     }
 
-    public void setStartTime(Date startTime) {
+    public void setStartTime(DateTime startTime) {
 	this.startTime = startTime;
     }
 
-    public Date getEndTime() {
+    public DateTime getEndTime() {
 	return this.endTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime(DateTime endTime) {
 	this.endTime = endTime;
     }
 

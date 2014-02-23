@@ -26,10 +26,14 @@ public class MovesActivityEnumDeserializer extends JsonDeserializer<MovesActivit
     }
 
     private MovesActivityEnum fromLabel(String label) {
-	for (MovesActivityEnum activity : Activities)
+	for (MovesActivityEnum activity : Activities){
 	    if (activity.getLabel().equals(label))
-		return activity;
-
+	    	return activity;
+	}
+	for (MovesActivityEnum activity : Activities){
+	    if (activity.name().equals(label))
+	    	return activity;
+	}
 	throw new IllegalArgumentException("Unknown Moves Activity label " + label);
     }
 }

@@ -16,8 +16,7 @@
    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
 
 	<!-- Properties -->
-	<context:property-placeholder location="classpath:/test-moves-props.properties"
-		ignore-unresolvable="true" />
+
 
 	<import resource="classpath*:/movesApplicationContext.xml" />
 

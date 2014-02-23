@@ -1,29 +1,31 @@
 package co.nutrino.api.moves.impl.dto.summary;
 
-import java.util.Date;
 
 
 
 
 
+
+
+import org.joda.time.DateTime;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import co.nutrino.api.moves.impl.response.serialize.MovesDateDeserializer;
+import co.nutrino.api.moves.impl.response.serialize.MovesDateTimeDeserializer;
 
 
 public class UserActivitySummary {
-    @JsonDeserialize(using = MovesDateDeserializer.class)
-    private Date date;
+    @JsonDeserialize(using = MovesDateTimeDeserializer.class)
+    private DateTime DateTime;
     private ActivitySummary[] summary;
     private int caloriesIdle;
 
-    public Date getDate() {
-	return this.date;
+    public DateTime getDate() {
+	return this.DateTime;
     }
 
-    public void setDate(Date date) {
-	this.date = date;
+    public void setDate(DateTime DateTime) {
+	this.DateTime = DateTime;
     }
 
     public ActivitySummary[] getSummary() {
