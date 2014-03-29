@@ -14,8 +14,9 @@ import co.nutrino.api.moves.impl.response.serialize.MovesDateTimeDeserializer;
 
 
 public class MovesActivity {
-    private MovesActivityEnum activity;
-
+    private MovesActivityEnum group;
+    private String activity;
+    private boolean manual;
     @JsonDeserialize(using = MovesDateTimeDeserializer.class)
     private DateTime startTime;
     @JsonDeserialize(using = MovesDateTimeDeserializer.class)
@@ -26,12 +27,12 @@ public class MovesActivity {
     private int calories;
     private TrackPoint[] trackPoints;
 
-    public MovesActivityEnum getActivity() {
-	return this.activity;
+    public MovesActivityEnum getGroup() {
+	return this.group;
     }
 
-    public void setActivity(MovesActivityEnum activity) {
-	this.activity = activity;
+    public void setGroup(MovesActivityEnum activity) {
+	this.group = activity;
     }
 
     public DateTime getStartTime() {
@@ -89,4 +90,20 @@ public class MovesActivity {
     public void setTrackPoints(TrackPoint[] trackPoints) {
 	this.trackPoints = trackPoints;
     }
+
+	public String getActivity() {
+		return activity;
+	}
+
+	public void setActivity(String activity) {
+		this.activity = activity;
+	}
+
+	public boolean isManual() {
+		return manual;
+	}
+
+	public void setManual(boolean manual) {
+		this.manual = manual;
+	}
 }

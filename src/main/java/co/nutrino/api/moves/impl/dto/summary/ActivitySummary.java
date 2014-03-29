@@ -3,18 +3,19 @@ package co.nutrino.api.moves.impl.dto.summary;
 import co.nutrino.api.moves.impl.dto.activity.MovesActivityEnum;
 
 public class ActivitySummary {
-    private MovesActivityEnum activity;
+    private MovesActivityEnum group;
+    private String activity;
     private int duration;
     private int distance;
     private int steps;
     private int calories;
 
-    public MovesActivityEnum getActivity() {
-	return this.activity;
+    public MovesActivityEnum getGroup() {
+	return this.group;
     }
 
-    public void setActivity(MovesActivityEnum activity) {
-	this.activity = activity;
+    public void setGroup(MovesActivityEnum activity) {
+	this.group = activity;
     }
 
     public int getDuration() {
@@ -48,4 +49,12 @@ public class ActivitySummary {
     public void setCalories(int calories) {
 	this.calories = calories;
     }
+
+	public String getActivity() {
+		return activity;
+	}
+
+	public void setActivity(String activity) {
+		this.activity = activity;
+	}
 }

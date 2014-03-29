@@ -1,6 +1,7 @@
 package co.nutrino.api.moves.util.convert;
 
 import java.io.IOException;
+import java.io.Serializable;
 
 import org.springframework.stereotype.Component;
 
@@ -16,7 +17,7 @@ import com.fasterxml.jackson.datatype.joda.JodaModule;
  * @param <T>
  */
 @Component
-public class JsonToPojoConverter implements IJsonToPojoConverter {
+public class JsonToPojoConverter implements IJsonToPojoConverter, Serializable {
 
     private final ObjectMapper mapper = new ObjectMapper();
     

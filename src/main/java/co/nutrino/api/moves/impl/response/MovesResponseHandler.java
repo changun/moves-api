@@ -1,6 +1,8 @@
 package co.nutrino.api.moves.impl.response;
 
 
+import java.io.Serializable;
+
 import org.scribe.model.Response;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +13,7 @@ import co.nutrino.api.moves.util.convert.JsonToPojoConverter;
 
 
 @Component
-public class MovesResponseHandler implements IMovesResponseHandler {
+public class MovesResponseHandler implements IMovesResponseHandler, Serializable {
 
     private IJsonToPojoConverter converter = new JsonToPojoConverter();
 

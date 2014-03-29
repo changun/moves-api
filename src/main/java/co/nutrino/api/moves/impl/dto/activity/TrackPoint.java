@@ -18,7 +18,7 @@ public class TrackPoint {
     private float lat;
     private float lon;
     @JsonDeserialize(using = MovesDateTimeDeserializer.class)
-    private DateTime timestamp;
+    private DateTime time;
 
     public float getLat() {
 	return this.lat;
@@ -36,11 +36,11 @@ public class TrackPoint {
 	this.lon = lon;
     }
 
-    public DateTime getTimestamp() {
-	return this.timestamp;
+    public DateTime getTime() {
+	return this.time;
     }
 
-    public void setTimestamp(DateTime timestamp) {
-	this.timestamp = timestamp;
+    public void setTime(DateTime timestamp) {
+	this.time = timestamp;
     }
 }

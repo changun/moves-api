@@ -28,11 +28,7 @@ public class MovesDateTimeDeserializer extends JsonDeserializer<DateTime> {
 		DateTimeFormatter dateTimeformatter = DateTimeFormat.forPattern("yyyyMMdd'T'HHmmssZ");
 		dateTimeformatter.withZoneUTC();
 		String dateString = node.asText();
-		if(dateString.contains("-")){
-			// it is a correct ISO string
-			return new DateTime(dateString);
-		}
-		else if(dateString.contains("T")){
+		if(dateString.contains("T")){
 			// it is a ISO string without '-' and ':'
 			return dateTimeformatter.parseDateTime(dateString);
 		}

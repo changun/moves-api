@@ -1,9 +1,9 @@
 package co.nutrino.api.moves.impl.client.activity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.inject.Inject;
-
 
 import org.springframework.stereotype.Component;
 
@@ -15,7 +15,7 @@ import co.nutrino.api.moves.impl.request.MovesResource;
 
 
 @Component
-public class MovesUserStorylineClient implements IMovesUserStorylineClient {
+public class MovesUserStorylineClient implements IMovesUserStorylineClient, Serializable {
 
     private IMovesUserStorylineResourceClient client;
 

@@ -1,6 +1,8 @@
 package co.nutrino.api.moves.impl.client;
 
-public class MovesUserCredentials implements IMoveUserCredentials {
+import java.io.Serializable;
+
+public class MovesUserCredentials implements IMoveUserCredentials, Serializable {
     private String token;
     private String refreshToken;
 

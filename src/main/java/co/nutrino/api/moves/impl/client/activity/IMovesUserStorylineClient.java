@@ -1,5 +1,6 @@
 package co.nutrino.api.moves.impl.client.activity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import co.nutrino.api.moves.exception.OAuthException;
@@ -9,7 +10,7 @@ import co.nutrino.api.moves.impl.dto.storyline.MovesStoryline;
 
 
 
-public interface IMovesUserStorylineClient {
+public interface IMovesUserStorylineClient{
 
     public MovesStoryline[] getUserStorylineForDay(IMoveUserCredentials credentials, Date date) throws ResourceException, OAuthException;
 

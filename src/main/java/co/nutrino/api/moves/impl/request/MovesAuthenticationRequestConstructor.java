@@ -2,6 +2,8 @@ package co.nutrino.api.moves.impl.request;
 
 
 
+import java.io.Serializable;
+
 import org.scribe.model.OAuthRequest;
 import org.scribe.model.Verb;
 import org.springframework.stereotype.Component;
@@ -11,7 +13,7 @@ import co.nutrino.api.moves.request.RequestParameters;
 
 
 @Component
-public class MovesAuthenticationRequestConstructor implements IMovesAuthenticationRequestConstructor {
+public class MovesAuthenticationRequestConstructor implements IMovesAuthenticationRequestConstructor, Serializable {
 
     private static final String ResourceUrl = "https://api.moves-app.com/oauth/v1";
 

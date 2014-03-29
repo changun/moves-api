@@ -1,7 +1,8 @@
 package co.nutrino.api.moves.impl.client;
 
-import javax.inject.Inject;
+import java.io.Serializable;
 
+import javax.inject.Inject;
 
 import org.springframework.stereotype.Component;
 
@@ -18,7 +19,7 @@ import co.nutrino.api.moves.request.RequestParameters;
 
 
 @Component
-public class MovesClient implements IMovesClient {
+public class MovesClient implements IMovesClient, Serializable {
 
     private IRequestTokenConvertor requestTokenConvertor;
     private IMovesOAuthService service;

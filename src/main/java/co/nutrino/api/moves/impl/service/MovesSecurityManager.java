@@ -1,5 +1,7 @@
 package co.nutrino.api.moves.impl.service;
 
+import java.io.Serializable;
+
 import javax.inject.Inject;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MovesSecurityManager implements IMovesSecurityManager {
+public class MovesSecurityManager implements IMovesSecurityManager, Serializable {
 
 	private final String OAuthKey;
     private final String OAuthSecret;

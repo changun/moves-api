@@ -20,6 +20,9 @@ public class MovesSegment {
     private DateTime startTime;
     @JsonDeserialize(using = MovesDateTimeDeserializer.class)
     private DateTime endTime;
+    @JsonDeserialize(using = MovesDateTimeDeserializer.class)
+    private DateTime lastUpdate;
+    
     private MovesPlace place;
     private MovesActivity[] activities;
 

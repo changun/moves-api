@@ -10,8 +10,7 @@ import co.nutrino.api.moves.impl.response.serialize.MovesActivityEnumDeserialize
 
 @JsonDeserialize(using = MovesActivityEnumDeserializer.class)
 public enum MovesActivityEnum {
-    Walking("wlk"), Running("run"), Cycling("cyc"), Trip("trp");
-
+    Walking("walking"), Running("running"), Cycling("cycling"), Trip("transport");
     private String label;
 
     private MovesActivityEnum(String label) {

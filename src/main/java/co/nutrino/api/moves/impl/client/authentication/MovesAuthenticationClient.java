@@ -1,9 +1,9 @@
 package co.nutrino.api.moves.impl.client.authentication;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 import javax.inject.Inject;
-
 
 import org.springframework.stereotype.Component;
 
@@ -19,7 +19,7 @@ import co.nutrino.api.moves.request.RequestParameters;
 
 
 @Component
-public class MovesAuthenticationClient implements IMovesAuthenticationClient {
+public class MovesAuthenticationClient implements IMovesAuthenticationClient, Serializable {
 
     private IMovesClient client;
     private IMovesSecurityManager securityManager;

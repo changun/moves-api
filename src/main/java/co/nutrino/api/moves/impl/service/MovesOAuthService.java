@@ -1,6 +1,9 @@
 package co.nutrino.api.moves.impl.service;
 
+import java.io.Serializable;
+
 import javax.inject.Inject;
+
 
 
 
@@ -24,7 +27,7 @@ import co.nutrino.api.moves.request.RequestParameters;
 
 
 @Component
-public class MovesOAuthService implements IMovesOAuthService {
+public class MovesOAuthService implements IMovesOAuthService , Serializable{
 
     private OAuthService service;
 

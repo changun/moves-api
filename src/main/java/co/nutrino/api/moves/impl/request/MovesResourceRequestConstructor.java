@@ -2,6 +2,8 @@ package co.nutrino.api.moves.impl.request;
 
 
 
+import java.io.Serializable;
+
 import org.scribe.model.OAuthRequest;
 import org.scribe.model.Verb;
 import org.scribe.oauth.OAuthService;
@@ -12,9 +14,9 @@ import co.nutrino.api.moves.request.RequestParameters;
 
 
 @Component
-public class MovesResourceRequestConstructor implements IMovesResourceRequestConstructor {
+public class MovesResourceRequestConstructor implements IMovesResourceRequestConstructor, Serializable {
 
-    private static final String ResourceUrl = "https://api.moves-app.com/api/v1";
+    private static final String ResourceUrl = "https://api.moves-app.com/api/1.1";
 
     @Override
     public OAuthRequest constructRequest(OAuthService service, MovesObject object, MovesResource resource, String[] pathParameters,

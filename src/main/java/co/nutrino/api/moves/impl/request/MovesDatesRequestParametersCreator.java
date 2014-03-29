@@ -1,7 +1,9 @@
 package co.nutrino.api.moves.impl.request;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Date;
+
 
 
 
@@ -13,7 +15,7 @@ import co.nutrino.api.moves.request.RequestParameters;
 
 
 @Component
-public class MovesDatesRequestParametersCreator implements IMovesDatesRequestParametersCreator {
+public class MovesDatesRequestParametersCreator implements IMovesDatesRequestParametersCreator, Serializable {
 
     @Override
     public RequestParameters createDatesIntervalRequestParameters(Date from, Date to) {
