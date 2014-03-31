@@ -8,7 +8,7 @@ public class MovesPlace {
     private MovesPlaceTypeEnum type;
     private String foursquareId;
     private TrackPoint location;
-
+    private String[] foursquareCategoryIds;
     public long getId() {
 	return this.id;
     }
@@ -48,4 +48,12 @@ public class MovesPlace {
     public void setLocation(TrackPoint location) {
 	this.location = location;
     }
+
+	public String[] getFoursquareCategoryIds() {
+		return foursquareCategoryIds;
+	}
+
+	public void setFoursquareCategoryIds(String[] foursquareCategoryIds) {
+		this.foursquareCategoryIds = foursquareCategoryIds;
+	}
 }
