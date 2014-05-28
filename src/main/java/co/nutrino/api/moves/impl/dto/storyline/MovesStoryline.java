@@ -9,11 +9,11 @@ import java.util.Date;
 
 import org.joda.time.DateTime;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-
 import co.nutrino.api.moves.impl.dto.summary.ActivitySummary;
 import co.nutrino.api.moves.impl.response.serialize.MovesDateDeserializer;
 import co.nutrino.api.moves.impl.response.serialize.MovesDateTimeDeserializer;
+
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 
 public class MovesStoryline {

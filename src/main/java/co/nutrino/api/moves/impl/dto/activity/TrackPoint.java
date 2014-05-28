@@ -1,17 +1,10 @@
 package co.nutrino.api.moves.impl.dto.activity;
 
-import java.util.Date;
-
-
-
-
-
-
 import org.joda.time.DateTime;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-
 import co.nutrino.api.moves.impl.response.serialize.MovesDateTimeDeserializer;
+
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 
 public class TrackPoint {

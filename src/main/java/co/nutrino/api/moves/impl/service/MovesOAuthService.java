@@ -4,9 +4,6 @@ import java.io.Serializable;
 
 import javax.inject.Inject;
 
-
-
-
 import org.scribe.model.OAuthRequest;
 import org.scribe.model.Response;
 import org.scribe.model.Token;
@@ -64,12 +61,18 @@ public class MovesOAuthService implements IMovesOAuthService , Serializable{
 	OAuthRequest request = this.authenticationRequestConstructor.constructRequest(Verb.POST, resource, requestParameters);
 	return sendRequest(token, request, c);
     }
-
+    @Override
+    public <T> T postAuthenticationResourceWithoutAccessToken(MovesAuthenticationResource resource, RequestParameters requestParameters, Class<T> c)
+	    throws ResourceException {
+	OAuthRequest request = this.authenticationRequestConstructor.constructRequest(Verb.POST, resource, requestParameters);
+	return sendRequest(null, request, c);
+    }
+    
     private <T> T sendRequest(IAuthToken token, OAuthRequest request, Class<T> c) throws ResourceException {
-	Token requestToken = new Token(token.getToken(), token.getSecret());
-
-	this.service.signRequest(requestToken, request);
-
+	if(token != null){
+		Token requestToken = new Token(token.getToken(), token.getSecret());
+		this.service.signRequest(requestToken, request);
+	}
 	Response response = request.send();
 	return this.responseHandler.getResponse(response, c);
     }

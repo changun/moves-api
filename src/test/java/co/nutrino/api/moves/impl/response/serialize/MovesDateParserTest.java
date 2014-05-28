@@ -4,11 +4,7 @@ import java.util.Calendar;
 
 import junit.framework.TestCase;
 
-
-
 import org.junit.Test;
-
-import co.nutrino.api.moves.impl.response.serialize.MovesDateParser;
 
 
 public class MovesDateParserTest extends TestCase {

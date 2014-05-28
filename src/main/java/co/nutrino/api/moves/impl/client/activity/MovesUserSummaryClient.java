@@ -4,7 +4,6 @@ import java.util.Date;
 
 import javax.inject.Inject;
 
-
 import org.springframework.stereotype.Component;
 
 import co.nutrino.api.moves.exception.OAuthException;

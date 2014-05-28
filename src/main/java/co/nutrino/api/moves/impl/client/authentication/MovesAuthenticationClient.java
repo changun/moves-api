@@ -52,7 +52,7 @@ public class MovesAuthenticationClient implements IMovesAuthenticationClient, Se
 	RequestParameters requestParameters = new RequestParameters(Arrays.asList(new RequestParameter[] { requestParameter1, requestParameter2,
 		requestParameter3, requestParameter4 }));
 
-	UserMovesAuthentication authentication = this.client.postAuthenticationResource(credentials, MovesAuthenticationResource.access_token,
+	UserMovesAuthentication authentication = this.client.postAuthenticationResourceWithoutAccessToken(credentials, MovesAuthenticationResource.access_token,
 		requestParameters);
 
 	return authentication;

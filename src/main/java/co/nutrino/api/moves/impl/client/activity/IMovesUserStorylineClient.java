@@ -1,6 +1,5 @@
 package co.nutrino.api.moves.impl.client.activity;
 
-import java.io.Serializable;
 import java.util.Date;
 
 import co.nutrino.api.moves.exception.OAuthException;

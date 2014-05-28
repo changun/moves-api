@@ -4,9 +4,6 @@ import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Date;
 
-
-
-
 import org.springframework.stereotype.Component;
 
 import co.nutrino.api.moves.impl.response.serialize.MovesDateParser;

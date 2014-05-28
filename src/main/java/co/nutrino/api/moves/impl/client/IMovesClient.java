@@ -24,4 +24,10 @@ public interface IMovesClient {
 
     public UserMovesAuthentication postAuthenticationResource(IMoveUserCredentials credentials, MovesAuthenticationResource resource,
 	    RequestParameters requestParameters) throws ResourceException, OAuthException;
+
+    public UserMovesAuthentication postAuthenticationResourceWithoutAccessToken(
+			IMoveUserCredentials credentials,
+			MovesAuthenticationResource resource,
+			RequestParameters requestParameters) throws ResourceException,
+			OAuthException;
 }

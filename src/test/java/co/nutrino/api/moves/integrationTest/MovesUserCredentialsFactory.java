@@ -2,7 +2,6 @@ package co.nutrino.api.moves.integrationTest;
 
 import javax.inject.Inject;
 
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 

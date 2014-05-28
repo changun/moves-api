@@ -5,7 +5,7 @@
 
 	<artifactId>moves-api</artifactId>
 	<groupId>com.moves</groupId>
-	<version>0.2</version>
+	<version>0.3</version>
 
 	<properties>
 		<java-version>1.6</java-version>
@@ -152,8 +152,22 @@
 		</dependency>
 
 	</dependencies>
+	 <distributionManagement>
+	    <repository>
+	      <id>ssh-repository</id>
+	      <url>scpexe://apollo.ohmage.org/home/changun/public_html/maven_repo</url>
+	    </repository>
+	  </distributionManagement>
 
 	<build>
+	    <extensions>
+	      <!-- Enabling the use of FTP -->
+	      <extension>
+	        <groupId>org.apache.maven.wagon</groupId>
+	         <artifactId>wagon-ssh-external</artifactId>
+	         <version>1.0-beta-6</version>
+	      </extension>
+	    </extensions>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

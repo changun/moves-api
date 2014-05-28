@@ -3,9 +3,9 @@ package co.nutrino.api.moves.impl.dto.storyline;
 
 
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-
 import co.nutrino.api.moves.impl.response.serialize.MovesPlaceTypeEnumDeserializer;
+
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 
 @JsonDeserialize(using = MovesPlaceTypeEnumDeserializer.class)

@@ -18,4 +18,9 @@ public interface IMovesOAuthService {
 
     public <T> T postAuthenticationResource(MovesAuthenticationResource resource, RequestParameters requestParameters, IAuthToken token, Class<T> c)
 	    throws ResourceException;
+
+    public <T> T postAuthenticationResourceWithoutAccessToken(
+			MovesAuthenticationResource resource,
+			RequestParameters requestParameters, Class<T> c)
+			throws ResourceException;
 }

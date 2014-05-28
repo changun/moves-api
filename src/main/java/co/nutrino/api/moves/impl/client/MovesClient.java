@@ -62,4 +62,9 @@ public class MovesClient implements IMovesClient, Serializable {
 	IAuthToken token = this.requestTokenConvertor.getRequestToken(credentials);
 	return this.service.postAuthenticationResource(resource, requestParameters, token, UserMovesAuthentication.class);
     }
+    @Override
+    public UserMovesAuthentication postAuthenticationResourceWithoutAccessToken(IMoveUserCredentials credentials, MovesAuthenticationResource resource,
+	    RequestParameters requestParameters) throws ResourceException, OAuthException {
+	return this.service.postAuthenticationResourceWithoutAccessToken(resource, requestParameters, UserMovesAuthentication.class);
+    }
 }

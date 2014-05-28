@@ -3,18 +3,11 @@ package co.nutrino.api.moves.impl.dto.user;
 import java.util.Date;
 import java.util.TimeZone;
 
-
-
-
-
-
-
+import co.nutrino.api.moves.impl.response.serialize.MovesDateDeserializer;
+import co.nutrino.api.moves.impl.response.serialize.MovesTimezoneDeserializer;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-
-import co.nutrino.api.moves.impl.response.serialize.MovesDateDeserializer;
-import co.nutrino.api.moves.impl.response.serialize.MovesTimezoneDeserializer;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class MovesUserProfile {
